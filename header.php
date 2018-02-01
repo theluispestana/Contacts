@@ -8,15 +8,11 @@
   <body>
     <header>
       <div class="header-main-container">
-        <!-- <div class="header-name-container"> -->
           <div class="header-name">
             <h2>Contacts</h2>
           </div>
-        <!-- </div> -->
-        <!-- <div class="header-links-container"> -->
           <div class="header-links">
             <a href="#">Sign In</a>
           </div>
-        <!-- </div> -->
       </div>
     </header>
