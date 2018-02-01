@@ -142,17 +142,17 @@ a:link {
   flex: 1;
   align-items: center;
   justify-content: center;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .content-text {
-  background-color: red;
+  /* background-color: red; */
   text-align: center;
   width: 60%;
 }
 
 .form-container {
-  background-color: blue;
+  /* background-color: blue; */
   text-align: center;
   width: 40%;
 }
