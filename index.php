@@ -10,7 +10,12 @@
       </div>
       <div class="form-container">
         <form class="sign-up" action="" method="post">
+          <input type="text" name="first" placeholder="First Name" value="">
+          <input type="text" name="last" placeholder="Last Name " value="">
+          <input type="text" name="email" placeholder="E-mail" value="">
           <input type="text" name="uid" placeholder="Username" value="">
+          <input type="password" name="pwd" placeholder="Password "value="">
+          <button type="button" name="submit">Sign Up</button>
         </form>
       </div>
     </div>
