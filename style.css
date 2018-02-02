@@ -108,23 +108,25 @@ a:link {
 }
 
 .header-main-container {
-  height: 100px;
+  height: 15vh;
   width: 100%;
   background-color: grey;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-name {
-  float: left;
-  padding: 42px 0 42px 5%;
-}
-
-.header-links-container {
-  text-align: right;
+  width: max-content;
+  font-size: 1.9vw;
+  padding-right: 35%;
 }
 
 .header-links {
-  float: right;
-  padding: 42px 5% 42px 0;
+  width: max-content;
+  font-size: 1.5vw;
+  padding-left: 35%;
 }
 
 .header-links a:link {
@@ -135,8 +137,8 @@ a:link {
   color: black;
 }
 
-.content-container {
-  min-height: 100vh;
+.content-main-container {
+  min-height: 85vh;
   width: 100%;
   display: flex;
   flex: 1;
@@ -144,10 +146,19 @@ a:link {
   justify-content: center;
 }
 
-.content-text {
+.content-text-container {
   /* background-color: red; */
   text-align: center;
   width: 60%;
+}
+
+.content-text-container h1 {
+  font-size: 2.6vw;
+}
+
+.content-text-container p {
+  width: 20%;
+  text-align: center;
 }
 
 .form-container {
