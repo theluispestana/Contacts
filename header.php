@@ -12,7 +12,8 @@
             <h2>Contacts test</h2>
           </div>
           <div class="header-links">
-            <a href="#">Sign In</a>
+            <h2 class="">Sign In</h2>
+            <h2 class="hide">Sign Up</h2>
           </div>
       </div>
     </header>

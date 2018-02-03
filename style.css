@@ -126,16 +126,17 @@ a:link {
 .header-links {
   width: max-content;
   font-size: 1.5vw;
+  font-weight: lighter;
   padding-left: 35%;
 }
 
-.header-links a:link {
+/* .header-links a:link {
   color: black;
 }
 
 .header-links a:visited {
   color: black;
-}
+} */
 
 .content-main-container {
   min-height: 85vh;
@@ -164,15 +165,21 @@ a:link {
 }
 
 .form-container {
-  background-color: blue;
   text-align: center;
   line-height: 40px;
   width: 40%;
 }
 
+.up, .in {
+  width: 50%;
+}
+
+.hide {
+  display: none;
+}
+
 .form-container input {
-  background-color: red;
-  width: 40%;
+  width: 100%;
   height: 40px;
   padding: 0px 5%;
   margin-bottom: 4px;
@@ -181,10 +188,19 @@ a:link {
   font-family: arial;
   font-size: 16px;
   color: #111;
-  line-height: 40px;
+  line-height: 60px;
 }
 
 .form-container button {
-  background-color: white; 
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 15px 32px;
   width: 40%;
+  cursor: pointer;
+}
+
+.form-container h1 {
+  text-align: left;
+  font-size: 2.3vh;
 }
