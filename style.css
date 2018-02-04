@@ -127,7 +127,8 @@ a:link {
   width: max-content;
   font-size: 1.5vw;
   font-weight: lighter;
-  padding-left: 35%;
+  margin-left: 35%;
+  /* padding-left: 35%; */
 }
 
 /* .header-links a:link {
