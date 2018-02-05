@@ -9,20 +9,20 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum felis vitae suscipit efficitur. Duis ut metus non diam scelerisque aliquam. Aenean fermentum sem sed orci hendrerit, ut molestie magna blandit. Sed hendrerit feugiat mi, et hendrerit est. Donec vel tortor in tellus cursus posuere. Maecenas fermentum est urna, et condimentum lorem vestibulum vitae. Pellentesque eu aliquam nunc. Duis vel turpi</p>
       </div>
       <div class="form-container">
-          <form class="sign up" action="" method="post">
+          <form class="sign up" action="includes/signup.inc.php" method="post">
             <h1>Sign Up</h1>
             <input type="text" name="first" placeholder="First Name" value="">
             <input type="text" name="last" placeholder="Last Name " value="">
             <input type="text" name="email" placeholder="E-mail" value="">
             <input type="text" name="uid" placeholder="Username" value="">
             <input type="password" name="pwd" placeholder="Password "value="">
-            <button type="button" name="submit">Sign Up</button>
+            <button type="submit" name="submit">Sign Up</button>
           </form>
-          <form class="sign in hide" action="" method="post">
+          <form class="sign in hide" action="includes/login.inc.php" method="post">
             <h1>Sign In</h1>
             <input type="text" name="uid" placeholder="Username" value="">
             <input type="password" name="pwd" placeholder="Password" value="">
-            <button type="button" name="submit">Sign In</button>
+            <button type="submit" name="submit">Sign In</button>
           </form>
       </div>
     </div>

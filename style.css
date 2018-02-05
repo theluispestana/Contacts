@@ -128,16 +128,15 @@ a:link {
   font-size: 1.5vw;
   font-weight: lighter;
   margin-left: 35%;
-  /* padding-left: 35%; */
+  user-select: none;
 }
 
-/* .header-links a:link {
-  color: black;
+.header-links h2:hover {
+  border-bottom: 2px solid black;
+  cursor: pointer;
+  user-select: none;
 }
 
-.header-links a:visited {
-  color: black;
-} */
 
 .content-main-container {
   min-height: 85vh;
