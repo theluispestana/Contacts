@@ -178,6 +178,13 @@ a:link {
   display: none;
 }
 
+.form-container span {
+    background-color: red;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    border-radius: 7px;
+}
+
 .form-container input {
   width: 100%;
   height: 40px;

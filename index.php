@@ -11,6 +11,11 @@
       <div class="form-container">
           <form class="sign up" action="includes/signup.inc.php" method="post">
             <h1>Sign Up</h1>
+            <?php
+              if(isset($_GET['sempty'])){
+                echo '<span>Fill in every field</span>';
+              }
+            ?>
             <input type="text" name="first" placeholder="First Name" value="">
             <input type="text" name="last" placeholder="Last Name " value="">
             <input type="text" name="email" placeholder="E-mail" value="">
