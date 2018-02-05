@@ -8,17 +8,8 @@ if (isset($_POST['submit'])) {
   $email = mysqli_real_escape_string($conn, $_POST['email']);
   $uid = mysqli_real_escape_string($conn, $_POST['uid']);
   $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
-  $inputErr = array();
 
-  //Check for empty fields
-  if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) {
-    $inputErr[0] = true; //Empty fields
-    echo "test";
-  }
+  header("Location: ../");
 
-  //check if input characters are valid
-  if (!preg_match("/^[a-zA-z]*$/", $first) || !preg_match("/^[a-zA-z]*$/", $last) || !preg_match("/^[a-zA-z\_]*$/", $uid)) {
-    echo "test2";
-  }
 
 }

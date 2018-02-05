@@ -12,9 +12,7 @@
           <form class="sign up" action="includes/signup.inc.php" method="post">
             <h1>Sign Up</h1>
             <?php
-              if(isset($_GET['sempty'])){
-                echo '<span>Fill in every field</span>';
-              }
+              include_once 'includes/formError.inc.php';
             ?>
             <input type="text" name="first" placeholder="First Name" value="">
             <input type="text" name="last" placeholder="Last Name " value="">
