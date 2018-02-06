@@ -178,11 +178,18 @@ a:link {
   display: none;
 }
 
-.form-container span {
+.fail {
     background-color: red;
     color: white;
     padding: 10px 10px 10px 10px;
     border-radius: 7px;
+}
+
+.success  {
+  background-color: green;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  border-radius: 7px;
 }
 
 .form-container input {

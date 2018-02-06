@@ -1,17 +1,21 @@
 <?php
 
 if(isset($_GET['sempty'])){
-  echo '<span>Fill in every field</span>';
+  echo '<span class="fail">Fill in every field</span><br />';
 }
 
 if(isset($_GET['invc'])){
-  echo '<br /><span>Invalid characters</span>';
+  echo '<span class="fail">Invalid characters</span><br />';
 }
 
 if(isset($_GET['inve'])){
-  echo '<br /><span>Invalid E-mail</span>';
+  echo '<span class="fail">Invalid E-mail</span><br />';
 }
 
 if(isset($_GET['tknu'])){
-  echo '<br /><span>That user-name is taken</span>';
+  echo '<span class="fail">That user-name is taken</span>';
+}
+
+if (isset($_GET['success'])) {
+ echo '<span class="success">Successfull sign-up</span>';
 }

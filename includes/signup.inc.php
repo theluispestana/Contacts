@@ -42,14 +42,31 @@ if (isset($_POST['submit'])) {
     $result = mysqli_stmt_get_result($stmt);
   }
   $resultCheck = mysqli_stmt_num_rows($result);
+
   //Checking if user name is usertaken
   if ($resultCheck > 0) {
     $header .= '&tknu';
+    $success = false;
   }
 
   //Checking for successful login
   if (!$success) {
     header($header);
+  } else {
+    //hashing the password
+    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+    //Adding info to database
+    $sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES (?, ?, ?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+      echo "SQL statement failed";
+    } else {
+      //bind parameters to the placeholder
+      mysqli_stmt_bind_param($stmt, "sssss", $first, $last, $email, $uid, $hashedPwd);
+      //run parameters inside database
+      mysqli_stmt_execute($stmt);
+      header("Location: ../?success");
+    }
   }
 
 }
