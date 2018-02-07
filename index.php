@@ -23,6 +23,9 @@
           </form>
           <form class="sign in hide" action="includes/login.inc.php" method="post">
             <h1>Sign In</h1>
+            <?php
+              include_once 'includes/formError.inc.php';
+            ?>
             <input type="text" name="uid" placeholder="Username" value="">
             <input type="password" name="pwd" placeholder="Password" value="">
             <button type="submit" name="submit">Sign In</button>
