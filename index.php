@@ -12,7 +12,7 @@
           <form class="sign up" action="includes/signup.inc.php" method="post">
             <h1>Sign Up</h1>
             <?php
-              include_once 'includes/formError.inc.php';
+              include_once 'includes/signupErr.inc.php';
             ?>
             <input type="text" name="first" placeholder="First Name" value="">
             <input type="text" name="last" placeholder="Last Name " value="">
@@ -24,7 +24,7 @@
           <form class="sign in hide" action="includes/login.inc.php" method="post">
             <h1>Sign In</h1>
             <?php
-              include_once 'includes/formError.inc.php';
+              include_once 'includes/loginErr.inc.php';
             ?>
             <input type="text" name="uid" placeholder="Username" value="">
             <input type="password" name="pwd" placeholder="Password" value="">
