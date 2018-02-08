@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_GET['siempty'])) {
-    echo '<span class="fail"></span>Fill in every field<br />';
+    echo '<span class="fail">Fill in every field</span><br />';
 }
 
 if (isset($_GET['logErr'])) {
