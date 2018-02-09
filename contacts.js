@@ -1,7 +1,7 @@
 let signInText = document.querySelectorAll('.header-links');
 let form = document.querySelectorAll('.sign');
 
-if (form[1].classList != sessionStorage.getItem('form1Cl')) {
+if (form[1].classList.contains('hide') && sessionStorage.getItem('form0Cl') != null) {
   form[0].classList = sessionStorage.getItem('form0Cl');
   form[1].classList = sessionStorage.getItem('form1Cl');
   signInText[0].children[0].classList = sessionStorage.getItem('signin0Cl');
