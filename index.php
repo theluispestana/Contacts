@@ -1,6 +1,5 @@
 <?php
   include_once 'header.php';
-  session_start();
 ?>
 
     <div class="content-main-container">
