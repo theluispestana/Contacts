@@ -36,12 +36,13 @@ if (isset($_POST['submit'])) {
                   header("Location: ../?logErr");
                 } elseif ($hashedPwdCheck == true) {
                     // log in the user
+                    $_SESSION['logged_in'] = true;
                     $_SESSION['user_id'] = $row['user_id'];
                     $_SESSION['user_first'] = $row['user_first'];
                     $_SESSION['user_last'] = $row['user_last'];
                     $_SESSION['user_email'] = $row['user_email'];
                     $_SESSION['user_uid'] = $row['user_uid'];
-                    header('Location: ../');
+                    header('Location: ../contacts.php');
                 }
             }
         }
