@@ -1,5 +1,6 @@
 <?php
   include_once 'header.php';
+  session_start();
 ?>
 
     <div class="content-main-container">
@@ -28,7 +29,7 @@
             ?>
             <input type="text" name="uid" placeholder="Username" value="">
             <input type="password" name="pwd" placeholder="Password" value="">
-            <button type="submit" name="submit">Sign In</button>
+            <button type="submit" name="submit" >Sign In</button>
           </form>
       </div>
     </div>

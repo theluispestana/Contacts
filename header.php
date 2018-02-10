@@ -13,13 +13,13 @@
           </div>
           <div class="header-links">
             <?php
-              session_start();
               if (!isset($_SESSION['logged_in'])) {
                 echo '<h2 class="">Sign In</h2>';
                 echo '<h2 class="hide">Sign Up</h2>';
               } else {
                 echo "<p>Signed in as: " . $_SESSION['user_uid'] . "</p>";
-                echo "<h2>Sign Out</h2>";
+                echo "<form class=\"\" action=\"includes/signout.inc.php\" method=\"post\">";
+                echo "<button type=\"submit\" name=\"submit\">Sign Out</button></form>";
               }
             ?>
           </div>
