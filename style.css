@@ -207,3 +207,27 @@ a:link {
   text-align: left;
   font-size: 2.3vh;
 }
+
+.content-container{
+  width: 100%;
+}
+
+.side-bar {
+  transition: all 1.8s ease;
+  background-color: red;
+  /* display: inline-block; */
+  float: left;
+  height: 85vh;
+  width: 15%;
+
+}
+
+.content {
+  transition: all 1.8s ease;
+  background-color: yellow;
+  /* float: left; */
+  /* margin-left: 25%; */
+  height: 85vh;
+  overflow: auto;
+  z-index: 10;
+}

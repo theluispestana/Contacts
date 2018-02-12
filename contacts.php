@@ -29,3 +29,16 @@
           </div>
       </div>
     </header>
+    <div class="content-container">
+      <div class="side-bar">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum felis vitae suscipit efficitur. Duis ut metus non diam scelerisque aliquam. Aenean fermentum sem sed orci hendrerit, ut molestie magna blandit. Sed hendrerit feugiat mi, et hendrerit est. Donec vel tortor in tellus cursus posuere. Maecenas fermentum est urna, et condimentum lorem vestibulum vitae. Pellentesque eu aliquam nunc. Duis vel turpi</p>
+      </div>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum felis vitae suscipit efficitur. Duis ut metus non diam scelerisque aliquam. Aenean fermentum sem sed orci hendrerit, ut molestie magna blandit. Sed hendrerit feugiat mi, et hendrerit est. Donec vel tortor in tellus cursus posuere. Maecenas fermentum est urna, et condimentum lorem vestibulum vitae. Pellentesque eu aliquam nunc. Duis vel turpi</p>
+      </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="contacts.js"></script>
+  </body>
+</html>

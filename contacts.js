@@ -1,11 +1,17 @@
 let signInText = document.querySelectorAll('.header-links');
 let form = document.querySelectorAll('.sign');
+let test = document.querySelector('.side-bar');
+let test2 = document.querySelector('.content');
 
-if (form[1].classList.contains('hide') && sessionStorage.getItem('form0Cl') != null) {
-  form[0].classList = sessionStorage.getItem('form0Cl');
-  form[1].classList = sessionStorage.getItem('form1Cl');
-  signInText[0].children[0].classList = sessionStorage.getItem('signin0Cl');
-  signInText[0].children[1].classList = sessionStorage.getItem('signin1Cl');
+if (window.location.pathname == "/Contacts/") {
+  //will preserve state of site after refresh
+  console.log('first if success');
+  if (form[1].classList.contains('hide') && sessionStorage.getItem('form0Cl') != null) {
+    form[0].classList = sessionStorage.getItem('form0Cl');
+    form[1].classList = sessionStorage.getItem('form1Cl');
+    signInText[0].children[0].classList = sessionStorage.getItem('signin0Cl');
+    signInText[0].children[1].classList = sessionStorage.getItem('signin1Cl');
+  }
 }
 
 function toggleForm() {
@@ -23,6 +29,7 @@ function toggleForm() {
   }
 }
 
+//function will preserve state of site after refresh
 function saveClass() {
   sessionStorage.setItem('form0Cl', form[0].classList);
   sessionStorage.setItem('form1Cl', form[1].classList);
@@ -30,9 +37,25 @@ function saveClass() {
   sessionStorage.setItem('signin1Cl', signInText[0].children[1].classList);
 }
 
-for (var i = 0; i < signInText[0].children.length; i++) {
-  signInText[0].children[i].addEventListener('click', function() {
-    toggleForm();
-    saveClass();
-  });
+function toggleSideBar() {
+  if (test.style.width == "15%") {
+    test.style.width = "0";
+  }
+  else {
+    test.style.width  = "15%";
+  }
+}
+
+if (window.location.pathname == "/Contacts/") {
+  //event listener for sign in/up text
+  for (var i = 0; i < signInText[0].children.length; i++) {
+    signInText[0].children[i].addEventListener('click', function() {
+      toggleForm();
+      saveClass();
+    });
+  }
+}
+
+if (window.location.pathname == "/Contacts/contacts.php") {
+  test2.addEventListener('click', toggleSideBar);
 }
