@@ -210,24 +210,28 @@ a:link {
 
 .content-container{
   width: 100%;
+  transition: all 1.8s ease;
 }
 
 .side-bar {
-  transition: all 1.8s ease;
   background-color: red;
   /* display: inline-block; */
+  position: absolute;
+  display: ;
   float: left;
   height: 85vh;
   width: 15%;
-
+  z-index: 1;
 }
 
 .content {
-  transition: all 1.8s ease;
+  transition: width 1.8s ease;
   background-color: yellow;
-  /* float: left; */
+  float: right;
+  position: relative;
   /* margin-left: 25%; */
   height: 85vh;
-  overflow: auto;
+  width: 85%;
+  /* overflow: auto; */
   z-index: 10;
 }

@@ -5,7 +5,6 @@ let test2 = document.querySelector('.content');
 
 if (window.location.pathname == "/Contacts/") {
   //will preserve state of site after refresh
-  console.log('first if success');
   if (form[1].classList.contains('hide') && sessionStorage.getItem('form0Cl') != null) {
     form[0].classList = sessionStorage.getItem('form0Cl');
     form[1].classList = sessionStorage.getItem('form1Cl');
@@ -38,11 +37,13 @@ function saveClass() {
 }
 
 function toggleSideBar() {
-  if (test.style.width == "15%") {
-    test.style.width = "0";
+  if (test2.style.width == "85%") {
+    // test.style.display = "none";
+    test2.style.width = "100%";
   }
   else {
-    test.style.width  = "15%";
+    test2.style.width = "85%";
+    // test.style.display = "";
   }
 }
 
