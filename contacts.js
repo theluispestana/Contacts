@@ -3,7 +3,7 @@ let form = document.querySelectorAll('.sign');
 let test = document.querySelector('.side-bar');
 let test2 = document.querySelector('.content');
 
-if (window.location.pathname == "/Contacts/") {
+if (window.location.pathname == "/contacts/") {
   //will preserve state of site after refresh
   console.log('first if success');
   if (form[1].classList.contains('hide') && sessionStorage.getItem('form0Cl') != null) {
