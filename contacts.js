@@ -3,7 +3,7 @@ let form = document.querySelectorAll('.sign');
 let test = document.querySelector('.side-bar');
 let test2 = document.querySelector('.content');
 
-if (window.location.pathname == "/Contacts/") {
+if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/") {
   //will preserve state of site after refresh
   if (form[1].classList.contains('hide') && sessionStorage.getItem('form0Cl') != null) {
     form[0].classList = sessionStorage.getItem('form0Cl');
@@ -47,7 +47,7 @@ function toggleSideBar() {
   }
 }
 
-if (window.location.pathname == "/Contacts/") {
+if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/") {
   //event listener for sign in/up text
   for (var i = 0; i < signInText[0].children.length; i++) {
     signInText[0].children[i].addEventListener('click', function() {
