@@ -253,7 +253,12 @@ a:link {
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
-  width: 20%;
-  height: 30vh;
+  width: 35%;
+  height: 40vh;
+}
+
+.contacts-form > input {
+  width: 70%;
 }
