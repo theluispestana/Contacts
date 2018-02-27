@@ -12,6 +12,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -34,10 +35,10 @@
 
       </div>
       <div class="content">
-
+        <i class="material-icons" style="font-size:48px">add_circle</i>
       </div>
     </div>
-    <div class="enlarged-form-container">
+    <div class="enlarged-form-container hide">
       <div class="enlarged-form">
         <form class="contacts-form" action="index.html" method="post">
           <input type="text" name="first" placeholder="First Name" value="">

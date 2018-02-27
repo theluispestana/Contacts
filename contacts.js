@@ -1,7 +1,11 @@
+//Index page variables
 let signInText = document.querySelectorAll('.header-links');
 let form = document.querySelectorAll('.sign');
-let test = document.querySelector('.side-bar');
-let test2 = document.querySelector('.content');
+//Contacts page variables
+let sideBar = document.querySelector('.side-bar');
+let content = document.querySelector('.content');
+let addButton = document.querySelector('.material-icons');
+let contactForm = document.querySelector('.enlarged-form-container')
 
 if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/") {
   //will preserve state of site after refresh
@@ -37,14 +41,23 @@ function saveClass() {
 }
 
 function toggleSideBar() {
-  if (test2.style.width == "85%") {
-    // test.style.display = "none";
-    test2.style.width = "100%";
+  if (content.style.width == "85%") {
+    // sideBar.style.display = "none";
+    content.style.width = "100%";
   }
   else {
-    test2.style.width = "85%";
-    // test.style.display = "";
+    content.style.width = "85%";
+    // sideBar.style.display = "";
   }
+}
+
+function  toggleAddForm() {
+  if (contactForm.classList.contains("hide") == true) {
+    contactForm.classList.remove('hide');
+  }
+  // else {
+  //   contactForm.classList.add('hide');
+  // }
 }
 
 if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/") {
@@ -58,5 +71,6 @@ if (window.location.pathname == "/Contacts/" || window.location.pathname == "/co
 }
 
 if (window.location.pathname == "/Contacts/contacts.php") {
-  test2.addEventListener('click', toggleSideBar);
+  content.addEventListener('click', toggleSideBar);
+  addButton.addEventListener('click', toggleAddForm);
 }
