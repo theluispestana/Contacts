@@ -259,6 +259,14 @@ a:link {
   height: 40vh;
 }
 
+.contacts-form {
+  line-height: 30px;
+}
+
 .contacts-form > input {
   width: 70%;
+}
+
+.contacts-form > * {
+  background-color: red;
 }
