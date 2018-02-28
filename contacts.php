@@ -41,12 +41,14 @@
     <div class="enlarged-form-container hide">
       <div class="enlarged-form">
         <form class="contacts-form" action="index.html" method="post">
-          <p>Create Contact</p>
+          <span>Create Contact</span>
+          <br>
           <input type="text" name="name" placeholder="Name" value="">
           <input type="text" name="email" placeholder="E-mail" value="">
           <input type="text" name="phone" placeholder="Phone Number" value="">
           <input type="text" name="note" placeholder="Notes" value="">
-          <p>Cancel</p>
+          <br>
+          <span>Cancel</span>
           <button type="button" name="submit">Submit</button>
         </form>
       </div>

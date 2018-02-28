@@ -6,6 +6,7 @@ let sideBar = document.querySelector('.side-bar');
 let content = document.querySelector('.content');
 let addButton = document.querySelector('.material-icons');
 let contactForm = document.querySelector('.enlarged-form-container')
+let cancelButton = document.querySelectorAll('.contacts-form span');
 
 if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/") {
   //will preserve state of site after refresh
@@ -55,9 +56,9 @@ function  toggleAddForm() {
   if (contactForm.classList.contains("hide") == true) {
     contactForm.classList.remove('hide');
   }
-  // else {
-  //   contactForm.classList.add('hide');
-  // }
+  else {
+    contactForm.classList.add('hide');
+  }
 }
 
 if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/") {
@@ -73,4 +74,5 @@ if (window.location.pathname == "/Contacts/" || window.location.pathname == "/co
 if (window.location.pathname == "/Contacts/contacts.php") {
   content.addEventListener('click', toggleSideBar);
   addButton.addEventListener('click', toggleAddForm);
+  cancelButton[1].addEventListener('click', toggleAddForm);
 }
