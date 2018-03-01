@@ -40,13 +40,13 @@
     </div>
     <div class="enlarged-form-container hide">
       <div class="enlarged-form">
-        <form class="contacts-form" action="index.html" method="post">
+        <form class="contacts-form" action="includes/addContacts.inc.php" method="post">
           <span>Create Contact</span>
           <br>
           <input type="text" name="name" placeholder="Name" value="">
           <input type="text" name="email" placeholder="E-mail" value="">
           <input type="text" name="phone" placeholder="Phone Number" value="">
-          <input type="text" name="note" placeholder="Notes" value="">
+          <input type="text" name="notes" placeholder="Notes" value="">
           <br>
           <span>Cancel</span>
           <button type="button" name="submit">Submit</button>

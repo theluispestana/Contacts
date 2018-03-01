@@ -61,7 +61,7 @@ function  toggleAddForm() {
   }
 }
 
-if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/") {
+if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/" || window.location.pathname == "/Contacts/index.php") {
   //event listener for sign in/up text
   for (var i = 0; i < signInText[0].children.length; i++) {
     signInText[0].children[i].addEventListener('click', function() {
