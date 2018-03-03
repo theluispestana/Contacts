@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     }
 
     //check if input characters are valid
-    if (!preg_match("/^[a-zA-z]*$/", $first) || !preg_match("/^[a-zA-z]*$/", $last) || !preg_match("/^[a-zA-z\_]*$/", $uid)) {
+    if (!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/", $last) || !preg_match("/^[a-zA-Z\_]*$/", $uid)) {
         $header .= '&invc';
         $success = false;
     }

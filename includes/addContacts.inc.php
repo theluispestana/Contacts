@@ -11,7 +11,17 @@ if (isset($_POST['submit'])) {
     $phone = mysqli_real_escape_string($conn, $_SESSION['phone']);
     $notes = mysqli_real_escape_string($conn, $_SESSION['notes']);
 
-    if (empty($name) || empty($email) || empty($phone) || empty($notes)) {
+    //Check for empty fields
+    // if (empty($name) || empty($email) || empty($phone) || empty($notes)) {
+    //
+    // }
 
+    //Check if input charcters are valid
+    if (!preg_match("/^[a-zA-Z]*$/", $name) || !preg_match("/^[a-zA-Z]*$/", $notes) || !preg_match("/^[0-9()-]*$/", $phone)) {
+      # code...
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      # code...
     }
 }
