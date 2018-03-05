@@ -52,7 +52,7 @@
           <input type="text" name="notes" placeholder="Notes" value="">
           <br>
           <span>Cancel</span>
-          <button type="button" name="submit">Submit</button>
+          <button type="submit" name="submit">Submit</button>
         </form>
       </div>
     </div>
