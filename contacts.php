@@ -43,6 +43,9 @@
         <form class="contacts-form" action="includes/addContacts.inc.php" method="post">
           <span>Create Contact</span>
           <br>
+          <?php
+            include_once 'includes/addContactErr.inc.php';
+          ?>
           <input type="text" name="name" placeholder="Name" value="">
           <input type="text" name="email" placeholder="E-mail" value="">
           <input type="text" name="phone" placeholder="Phone Number" value="">
