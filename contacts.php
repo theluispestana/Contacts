@@ -10,7 +10,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Contacts</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>

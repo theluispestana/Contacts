@@ -1,5 +1,6 @@
 <?php
 
+//Error Messages for login form
 if (isset($_GET['siempty'])) {
     echo '<span class="fail">Fill in every field</span><br />';
 }

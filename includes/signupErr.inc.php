@@ -1,5 +1,6 @@
 <?php
 
+//Error Messages for sign up form
 if (isset($_GET['sempty'])) {
     echo '<span class="fail">Fill in every field</span><br />';
 }
