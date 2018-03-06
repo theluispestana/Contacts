@@ -2,13 +2,13 @@
 
 //Error messages for add contact form
 if (isset($_GET['empty'])) {
-    echo '<span class="fail">Fill in every field</span><br />';
+    echo '<text class="fail">Fill in every field</text><br />';
 }
 
 if (isset($_GET['invc'])) {
-    echo '<span class="fail">Invalid characters</span><br />';
+    echo '<text class="fail">Invalid characters</text><br />';
 }
 
 if (isset($_GET['invemail'])) {
-    echo '<span class="fail">Invalid E-mail</span><br />';
+    echo '<text class="fail">Invalid E-mail</text><br />';
 }

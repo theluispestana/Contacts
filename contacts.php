@@ -35,6 +35,9 @@
 
       </div>
       <div class="content">
+        <?php
+          include_once 'includes/contactsQuery.inc.php'
+        ?>
         <i class="material-icons" style="font-size:48px">add_circle</i>
       </div>
     </div>
