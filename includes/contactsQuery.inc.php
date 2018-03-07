@@ -17,12 +17,16 @@ if (isset($_SESSION['user_id'])) {
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
     }
-
-    while ($row = $result->fetch_row()) {
-        // printf ("%s (%s)\n", $row[0], $row[1]);
-        echo $row;
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    // var_dump($result);
+    // var_dump($row[1]["unique_id"]);
+    // echo $row[1]["unique_id"];
+    foreach ($rows as $row) {
+      echo $row["contact_name"] . " ";
+      echo $row["contact_phone"] . " ";
+      echo $row["contact_email"] . " ";
+      echo $row["contact_notes"] . " ";
+      echo "<br>";
     }
-    foreach($result->fetch_row() as $row) {
-      echo $row;
-    }
+    // echo '<pre>'; print_r($rows);echo '<pre>';
 }
