@@ -21,12 +21,19 @@ if (isset($_SESSION['user_id'])) {
     // var_dump($result);
     // var_dump($row[1]["unique_id"]);
     // echo $row[1]["unique_id"];
-    foreach ($rows as $row) {
-      echo $row["contact_name"] . " ";
-      echo $row["contact_phone"] . " ";
-      echo $row["contact_email"] . " ";
-      echo $row["contact_notes"] . " ";
-      echo "<br>";
+    echo "<div class=''>";
+      foreach ($rows as $row) {
+        echo $row["contact_name"] . " ";
+        echo $row["contact_phone"] . " ";
+        echo $row["contact_email"] . " ";
+        echo $row["contact_notes"] . " ";
+        echo "<br>";
+      }
+    echo "</div>";
+    echo $result->num_rows;
+    for ($i=0; $i < $result->num_rows; $i++) {
+      echo $i;
     }
-    // echo '<pre>'; print_r($rows);echo '<pre>';
+    sort($rows);
+    echo '<pre>'; print_r($rows);echo '<pre>';
 }
