@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
         header("Location: ../contacts.php?empty");
     } else {
         //Check if input charcters are valid
-        if (!preg_match("/^[a-zA-Z]*$/", $name) || !preg_match("/^[a-zA-Z]*$/", $notes) || !preg_match("/^[0-9()-]*$/", $phone)) {
+        if (!preg_match("/^[a-zA-Z\s]*$/", $name) || !preg_match("/^[a-zA-Z\s]*$/", $notes) || !preg_match("/^[0-9()-]*$/", $phone)) {
             header("Location: ../contacts.php?invc");
         } else {
           //Check if Email is valid

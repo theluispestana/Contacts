@@ -6,7 +6,19 @@ if (isset($_SESSION['user_id'])) {
     $uid = $_SESSION['user_id'];
 
     //creating prepared statement
-    $sql = "SELECT * FROM contact_info WHERE user_id=?";
+    $sql = "SELECT * FROM contact_info WHERE user_id=? ";
+
+    //If statements will change order of database results
+    if (!isset($_GET['sort'])) {
+      $sql .= "ORDER BY contact_name DESC";
+    } elseif ($_GET['sort'] == "aa") {
+      $sql .= "ORDER BY contact_name ASC";
+    } elseif ($_GET['sort'] == "dd") {
+      $sql .= "ORDER BY unique_id DESC";
+    } elseif ($_GET['sort'] == "da") {
+      $sql .= "ORDER BY unique_id ASC";
+    }
+
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         echo "SQL statement failed";
@@ -30,10 +42,9 @@ if (isset($_SESSION['user_id'])) {
         echo "<br>";
       }
     echo "</div>";
-    echo $result->num_rows;
-    for ($i=0; $i < $result->num_rows; $i++) {
-      echo $i;
-    }
-    sort($rows);
-    echo '<pre>'; print_r($rows);echo '<pre>';
+    // for ($i=0; $i < $result->num_rows; $i++) {
+    //   echo $i;
+    // }
+    // sort($rows);
+    // echo '<pre>'; print_r($rows);echo '<pre>';
 }
