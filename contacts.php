@@ -32,7 +32,27 @@
     </header>
     <div class="content-container">
       <div class="side-bar">
-
+        <div class="sort-container">
+          <h2>Sort</h2>
+            <div class="sort-options">
+              <form class="sort-form" action="includes/sort.inc.php" method="post">
+                <h3>Alphabetical order</h3>
+                <input type="radio" name="sort" id="alphaAscending" checked>
+                <label for="alphaAscending"> :Ascending</label>
+                <br>
+                <input type="radio" name="sort" id="alphaDescending">
+                <label for="alphaDescending"> :Descending:</label>
+                <h3>Order added</h3>
+                <input type="radio" name="sort" id="orderAscending">
+                <label for="orderAscending"> :Ascending</label>
+                <br>
+                <input type="radio" name="sort" id="orderDescending">
+                <label for="orderDescending"> :Descending</label>
+                <br>
+                <button type="submit" name="button">Sort</button>
+              </form>
+          </div>
+        </div>
       </div>
       <div class="content">
         <?php

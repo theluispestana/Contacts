@@ -35,11 +35,13 @@ if (isset($_SESSION['user_id'])) {
     // echo $row[1]["unique_id"];
     echo "<div class=''>";
       foreach ($rows as $row) {
+        echo "<div class=" . $row['unique_id'] . "\">";
         echo $row["contact_name"] . " ";
         echo $row["contact_phone"] . " ";
         echo $row["contact_email"] . " ";
         echo $row["contact_notes"] . " ";
         echo "<br>";
+        echo "</div>";
       }
     echo "</div>";
     // for ($i=0; $i < $result->num_rows; $i++) {
