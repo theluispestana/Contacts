@@ -37,19 +37,19 @@
             <div class="sort-options">
               <form class="sort-form" action="includes/sort.inc.php" method="post">
                 <h3>Alphabetical order</h3>
-                <input type="radio" name="sort" id="alphaAscending" checked>
-                <label for="alphaAscending"> :Ascending</label>
+                <input type="radio" name="sort" id="alphaAscending" value="alphaAscending" checked>
+                <label for="alphaAscending">Ascending</label>
                 <br>
-                <input type="radio" name="sort" id="alphaDescending">
-                <label for="alphaDescending"> :Descending:</label>
+                <input type="radio" name="sort" id="alphaDescending" value="alphaDescending">
+                <label for="alphaDescending">Descending:</label>
                 <h3>Order added</h3>
-                <input type="radio" name="sort" id="orderAscending">
-                <label for="orderAscending"> :Ascending</label>
+                <input type="radio" name="sort" id="orderAscending" value="orderAscending">
+                <label for="orderAscending">Ascending</label>
                 <br>
-                <input type="radio" name="sort" id="orderDescending">
-                <label for="orderDescending"> :Descending</label>
+                <input type="radio" name="sort" id="orderDescending" value="orderDescending">
+                <label for="orderDescending">Descending</label>
                 <br>
-                <button type="submit" name="button">Sort</button>
+                <button type="submit" name="submit">Sort</button>
               </form>
           </div>
         </div>

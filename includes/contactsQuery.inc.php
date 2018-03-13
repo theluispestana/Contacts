@@ -10,15 +10,15 @@ if (isset($_SESSION['user_id'])) {
 
     //If statements will change order of database results
     if (!isset($_GET['sort'])) {
-      $sql .= "ORDER BY contact_name DESC";
-    } elseif ($_GET['sort'] == "aa") {
-      $sql .= "ORDER BY contact_name ASC";
+        $sql .= "ORDER BY contact_name ASC";
+    } elseif ($_GET['sort'] == "ad") {
+        $sql .= "ORDER BY contact_name DESC";
     } elseif ($_GET['sort'] == "dd") {
-      $sql .= "ORDER BY unique_id DESC";
+        $sql .= "ORDER BY unique_id DESC";
     } elseif ($_GET['sort'] == "da") {
-      $sql .= "ORDER BY unique_id ASC";
+        $sql .= "ORDER BY unique_id ASC";
     }
-
+    
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         echo "SQL statement failed";
@@ -34,7 +34,7 @@ if (isset($_SESSION['user_id'])) {
     // var_dump($row[1]["unique_id"]);
     // echo $row[1]["unique_id"];
     echo "<div class=''>";
-      foreach ($rows as $row) {
+    foreach ($rows as $row) {
         echo "<div class=" . $row['unique_id'] . "\">";
         echo $row["contact_name"] . " ";
         echo $row["contact_phone"] . " ";
@@ -42,11 +42,7 @@ if (isset($_SESSION['user_id'])) {
         echo $row["contact_notes"] . " ";
         echo "<br>";
         echo "</div>";
-      }
+    }
     echo "</div>";
-    // for ($i=0; $i < $result->num_rows; $i++) {
-    //   echo $i;
-    // }
-    // sort($rows);
     // echo '<pre>'; print_r($rows);echo '<pre>';
 }
