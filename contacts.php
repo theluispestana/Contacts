@@ -55,10 +55,20 @@
         </div>
       </div>
       <div class="content">
-        <?php
-          include_once 'includes/contactsQuery.inc.php'
-        ?>
-        <i class="material-icons" style="font-size:48px">add_circle</i>
+        <div class="">
+          <table style="width:90%">
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>E-mail</th>
+              <th>Notes</th>
+            </tr>
+              <?php
+              include_once 'includes/contactsQuery.inc.php'
+              ?>
+            </table>
+        </div>
+        <i class="material-icons add-button" style="font-size:48px">add_circle</i>
       </div>
     </div>
     <div class="enlarged-form-container hide">

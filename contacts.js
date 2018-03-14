@@ -4,7 +4,7 @@ let form = document.querySelectorAll('.sign');
 //Contacts page variables
 let sideBar = document.querySelector('.side-bar');
 let content = document.querySelector('.content');
-let addButton = document.querySelector('.material-icons');
+let addButton = document.querySelector('.add-button');
 let contactForm = document.querySelector('.enlarged-form-container')
 let cancelButton = document.querySelectorAll('.contacts-form span');
 

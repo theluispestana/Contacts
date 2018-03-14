@@ -18,7 +18,7 @@ if (isset($_SESSION['user_id'])) {
     } elseif ($_GET['sort'] == "da") {
         $sql .= "ORDER BY unique_id ASC";
     }
-    
+
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         echo "SQL statement failed";
@@ -30,19 +30,26 @@ if (isset($_SESSION['user_id'])) {
         $result = mysqli_stmt_get_result($stmt);
     }
     $rows = $result->fetch_all(MYSQLI_ASSOC);
-    // var_dump($result);
-    // var_dump($row[1]["unique_id"]);
-    // echo $row[1]["unique_id"];
-    echo "<div class=''>";
+
     foreach ($rows as $row) {
-        echo "<div class=" . $row['unique_id'] . "\">";
-        echo $row["contact_name"] . " ";
-        echo $row["contact_phone"] . " ";
-        echo $row["contact_email"] . " ";
-        echo $row["contact_notes"] . " ";
-        echo "<br>";
-        echo "</div>";
+        echo "<tr>";
+          echo "<td>";
+            echo $row["contact_name"];
+          echo "</td>";
+          echo "<td>";
+            echo $row["contact_phone"];
+          echo "</td>";
+          echo "<td>";
+            echo $row["contact_email"];
+          echo "</td>";
+          echo "<td>";
+            echo $row["contact_notes"];
+          echo "</td>";
+          echo "<td class=" . $row['unique_id'] . "\">";
+            echo "<i class=\"material-icons\">delete</i>";
+          echo "</td>";
+        echo "</tr>";
+        // echo "<br>";
     }
-    echo "</div>";
     // echo '<pre>'; print_r($rows);echo '<pre>';
 }
