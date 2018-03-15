@@ -236,7 +236,7 @@ a:link {
   z-index: 10;
 }
 
-.enlarged-form-container {
+.enlarged-form-container, .second-enlarged-form-container {
   background-color: rgba(128, 128, 128, .75);
   position: fixed;
   top: 0;
@@ -279,6 +279,12 @@ a:link {
 
 td, th {
   border: 1px solid #dddddd;
+  color: black;
+  text-decoration: none;
   text-align: left;
   padding: 8px;
+}
+
+.material-icons {
+  color: black;
 }

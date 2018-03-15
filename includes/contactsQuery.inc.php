@@ -46,7 +46,9 @@ if (isset($_SESSION['user_id'])) {
             echo $row["contact_notes"];
           echo "</td>";
           echo "<td class=" . $row['unique_id'] . "\">";
-            echo "<i class=\"material-icons\">delete</i>";
+            echo "<a href=\"includes/rowDelete.inc.php?id=" . $row['unique_id'] ."\">";
+              echo "<i class=\"material-icons\">delete</i>";
+            echo "</a>";
           echo "</td>";
         echo "</tr>";
         // echo "<br>";
