@@ -13,6 +13,7 @@
     <title>Contacts</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
   </head>
   <body>
     <header>
@@ -54,9 +55,9 @@
           </div>
         </div>
       </div>
-      <div class="content">
-        <div class="">
-          <table style="width:90%">
+      <div class="contacts-container">
+        <div class="contacts">
+          <table>
             <tr>
               <th>Name</th>
               <th>Phone</th>
@@ -66,7 +67,7 @@
               <?php
               include_once 'includes/contactsQuery.inc.php'
               ?>
-            </table>
+          </table>
         </div>
         <i class="material-icons add-button" style="font-size:48px">add_circle</i>
       </div>

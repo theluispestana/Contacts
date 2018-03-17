@@ -3,7 +3,7 @@ let signInText = document.querySelectorAll('.header-links');
 let form = document.querySelectorAll('.sign');
 //Contacts page variables
 let sideBar = document.querySelector('.side-bar');
-let content = document.querySelector('.content');
+let content = document.querySelector('.contacts-container');
 let addButton = document.querySelector('.add-button');
 let contactForm = document.querySelector('.enlarged-form-container')
 let cancelButton = document.querySelectorAll('.contacts-form span');

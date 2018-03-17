@@ -18,7 +18,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 
 body {
   line-height: 1;
-  font-family: 'Roboto', serif;
+  font-family: 'Lato', serif;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -112,11 +112,11 @@ a:link {
   width: max-content;
   font-size: 1.9vw;
   padding-right: 35%;
-  color: black;
+  color: #2b2b2b;
 }
 
 .header-links {
-  color: #CC2C16;
+  color: #2b2b2b;
   width: max-content;
   font-size: 1.5vw;
   font-weight: lighter;
@@ -141,6 +141,7 @@ a:link {
 
 .content-text-container {
   /* background-color: red; */
+  color: #2b2b2b;
   text-align: center;
   width: 60%;
 }
@@ -157,6 +158,7 @@ a:link {
 }
 
 .form-container {
+  color: #2b2b2b;
   text-align: center;
   line-height: 40px;
   width: 40%;
@@ -217,7 +219,8 @@ a:link {
 }
 
 .side-bar {
-  background-color: red;
+  background-color: #5E5F7E;
+  color: #2b2b2b;
   /* display: inline-block; */
   position: absolute;
   display: ;
@@ -227,9 +230,9 @@ a:link {
   z-index: 1;
 }
 
-.content {
+.contacts-container {
   transition: width 1.8s ease;
-  background-color: yellow;
+  background-color: white;
   float: right;
   position: relative;
   /* margin-left: 25%; */
@@ -280,9 +283,13 @@ a:link {
   line-height: 5vh;
 }
 
+table {
+  width:90%;
+}
+
 td, th {
   border: 1px solid #dddddd;
-  color: black;
+  color:  #2b2b2b;
   text-decoration: none;
   text-align: left;
   padding: 8px;
@@ -290,4 +297,8 @@ td, th {
 
 .material-icons {
   color: black;
+}
+
+.trash {
+  color: #C82914;
 }
