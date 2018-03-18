@@ -200,12 +200,12 @@ a:link {
 }
 
 .form-container button {
-  background-color: grey;
+  background-color: #A9631B;
   border: none;
   color: white;
+  cursor: pointer;
   padding: 15px 32px;
   width: 40%;
-  cursor: pointer;
 }
 
 .form-container h1 {
@@ -283,8 +283,18 @@ a:link {
   line-height: 5vh;
 }
 
+.sort-container {
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.contacts {
+  padding-left: 5%;
+  padding-top: 2%;
+}
+
 table {
-  width:90%;
+  width:95%;
 }
 
 td, th {
@@ -295,8 +305,29 @@ td, th {
   padding: 8px;
 }
 
+button {
+  background-color: transparent;
+  border: 2px solid #A9631B;
+  color: white;
+  /* padding: 15px 32px; */
+  text-align: center;
+  transition-duration: 0.4s;
+  width: 40%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #A9631B;
+}
+
+.add-button {
+    padding-left: 5%;
+}
+
 .material-icons {
   color: black;
+  user-select: none;
+  cursor: pointer;
 }
 
 .trash {
