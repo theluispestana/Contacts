@@ -2,6 +2,7 @@
 let signInText = document.querySelectorAll('.header-links');
 let form = document.querySelectorAll('.sign');
 //Contacts page variables
+let sidebarButton = document.querySelector('.side-bar-button');
 let sideBar = document.querySelector('.side-bar');
 let content = document.querySelector('.contacts-container');
 let addButton = document.querySelector('.add-button');
@@ -41,6 +42,7 @@ function saveClass() {
   sessionStorage.setItem('signin1Cl', signInText[0].children[1].classList);
 }
 
+//function will toggle animation to hide or show side bar options
 function toggleSideBar() {
   if (content.style.width == "85%") {
     // sideBar.style.display = "none";
@@ -72,7 +74,7 @@ if (window.location.pathname == "/Contacts/" || window.location.pathname == "/co
 }
 
 if (window.location.pathname == "/Contacts/contacts.php") {
-  content.addEventListener('click', toggleSideBar);
+  sidebarButton.addEventListener('click', toggleSideBar);
   addButton.addEventListener('click', toggleAddForm);
   cancelButton[1].addEventListener('click', toggleAddForm);
 }

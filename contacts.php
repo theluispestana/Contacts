@@ -17,13 +17,14 @@
   </head>
   <body>
     <header>
-      <div class="header-main-container">
-          <div class="header-name">
-            <h2>Contacts test</h2>
+      <div class="contacts-header-main-container">
+          <div class="contacts-header-name">
+            <i class="material-icons side-bar-button">view_headline</i>
+            <h2>Contacts</h2>
           </div>
-          <div class="header-links">
+          <div class="header-links contacts">
             <?php
-              echo "<p>Signed in as: " . $_SESSION['user_uid'] . "</p>";
+              echo "<text>Signed in as: " . $_SESSION['user_uid'] . "</test>";
             ?>
             <form class="" action="includes/signout.inc.php" method="post">
               <button type="submit" name="submit">Sign Out</button>
