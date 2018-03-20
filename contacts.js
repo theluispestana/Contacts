@@ -9,6 +9,7 @@ let addButton = document.querySelector('.add-button');
 let contactForm = document.querySelector('.enlarged-form-container')
 let cancelButton = document.querySelectorAll('.contacts-form span');
 
+//code will only run on homepage
 if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/") {
   //will preserve state of site after refresh
   if (form[1].classList.contains('hide') && sessionStorage.getItem('form0Cl') != null) {
@@ -19,14 +20,21 @@ if (window.location.pathname == "/Contacts/" || window.location.pathname == "/co
   }
 }
 
+//code will only run on contacts.php
+if (window.location.pathname == "/Contacts/contacts.php") {
+  //will close side bar by default if window is too narrow
+  if (window.innerWidth <= 700) {
+    content.style.width = "100%";
+  }
+}
+
 function toggleForm() {
   if (form[1].classList.contains('hide')) {
     form[0].classList.add('hide');
     form[1].classList.remove('hide');
     signInText[0].children[0].classList.add('hide');
     signInText[0].children[1].classList.remove('hide');
-  }
-  else {
+  } else {
     form[0].classList.remove('hide');
     form[1].classList.add('hide');
     signInText[0].children[0].classList.remove('hide');
@@ -44,21 +52,30 @@ function saveClass() {
 
 //function will toggle animation to hide or show side bar options
 function toggleSideBar() {
-  if (content.style.width == "85%") {
-    // sideBar.style.display = "none";
-    content.style.width = "100%";
-  }
-  else {
-    content.style.width = "85%";
-    // sideBar.style.display = "";
+  if (window.innerWidth <= 700) {
+    if (content.style.width == "60%") {
+      // sideBar.style.display = "none";
+      content.style.width = "100%";
+    } else {
+      content.style.width = "60%";
+      // sideBar.style.width = "40%";
+      // sideBar.style.fontsize =
+    }
+  } else {
+    if (content.style.width == "85%") {
+      // sideBar.style.display = "none";
+      content.style.width = "100%";
+    } else {
+      content.style.width = "85%";
+      // sideBar.style.width = "15%";
+    }
   }
 }
 
-function  toggleAddForm() {
+function toggleAddForm() {
   if (contactForm.classList.contains("hide") == true) {
     contactForm.classList.remove('hide');
-  }
-  else {
+  } else {
     contactForm.classList.add('hide');
   }
 }
@@ -77,4 +94,11 @@ if (window.location.pathname == "/Contacts/contacts.php") {
   sidebarButton.addEventListener('click', toggleSideBar);
   addButton.addEventListener('click', toggleAddForm);
   cancelButton[1].addEventListener('click', toggleAddForm);
+  window.addEventListener("resize", function() {
+    if (window.innerWidth <= 700) {
+      content.style.width = "100%";
+    } else {
+      content.style.width = "85%";
+    }
+  });
 }

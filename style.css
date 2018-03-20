@@ -393,21 +393,34 @@ button:hover {
     align-items: center;
     justify-content: center;
   }
+
   .form-container {
     order: 1;
     padding-top: 20vh;
     height: 85vh;
   }
+
   .form-container>* {
     width: 100%;
   }
+
   .content-text-container {
     text-align: center;
     order: 2;
     height: 60vh;
     width: 100%;
   }
+
   .contacts {
     overflow-x: auto;
+  }
+
+  .side-bar {
+    /* font-size:  */
+    width: 40%;
+  }
+
+  .side-bar > * {
+    font-size: 125%;
   }
 }
