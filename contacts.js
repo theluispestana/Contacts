@@ -21,7 +21,7 @@ if (window.location.pathname == "/" || window.location.pathname == "/contacts/")
 }
 
 //code will only run on contacts.php
-if (window.location.pathname == "/Contacts/contacts.php") {
+if (window.location.pathname == "/contacts.php") {
   //will close side bar by default if window is too narrow
   if (window.innerWidth <= 700) {
     content.style.width = "100%";
