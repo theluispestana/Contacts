@@ -10,7 +10,7 @@ let contactForm = document.querySelector('.enlarged-form-container')
 let cancelButton = document.querySelectorAll('.contacts-form span');
 
 //code will only run on homepage
-if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/") {
+if (window.location.pathname == "/" || window.location.pathname == "/contacts/") {
   //will preserve state of site after refresh
   if (form[1].classList.contains('hide') && sessionStorage.getItem('form0Cl') != null) {
     form[0].classList = sessionStorage.getItem('form0Cl');
@@ -80,7 +80,7 @@ function toggleAddForm() {
   }
 }
 
-if (window.location.pathname == "/Contacts/" || window.location.pathname == "/contacts/" || window.location.pathname == "/Contacts/index.php") {
+if (window.location.pathname == "/" || window.location.pathname == "/contacts/" || window.location.pathname == "/Contacts/index.php") {
   //event listener for sign in/up text
   for (var i = 0; i < signInText[0].children.length; i++) {
     signInText[0].children[i].addEventListener('click', function() {
@@ -90,7 +90,7 @@ if (window.location.pathname == "/Contacts/" || window.location.pathname == "/co
   }
 }
 
-if (window.location.pathname == "/Contacts/contacts.php") {
+if (window.location.pathname == "/contacts.php") {
   sidebarButton.addEventListener('click', toggleSideBar);
   addButton.addEventListener('click', toggleAddForm);
   cancelButton[1].addEventListener('click', toggleAddForm);
