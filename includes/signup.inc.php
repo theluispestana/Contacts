@@ -33,7 +33,10 @@ if (isset($_POST['submit'])) {
     $sql = "SELECT * FROM users WHERE user_uid=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        echo "SQL statement failed";
+        echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    	echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    	echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+   	exit;
     } else {
         //bind parameters to the placeholder
         mysqli_stmt_bind_param($stmt, "s", $uid);
@@ -59,7 +62,10 @@ if (isset($_POST['submit'])) {
         $sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES (?, ?, ?, ?, ?)";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            echo "SQL statement failed";
+            echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    	    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+            echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    	    exit;
         } else {
             //bind parameters to the placeholder
             mysqli_stmt_bind_param($stmt, "sssss", $first, $last, $email, $uid, $hashedPwd);
