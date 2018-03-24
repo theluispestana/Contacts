@@ -1,9 +1,9 @@
 <?php
 
 $dbServername = 'localhost';
-$dbUsername = 'onlin402_admin';
+$dbUsername = 'onlineco_admin';
 $dbPassword = 'Avoidingtheerror1324';
-$dbName = 'onlin402_Contacts';
+$dbName = 'onlineco_contacts';
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
@@ -13,4 +13,5 @@ if (!$conn) {
     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
     exit;
 }
-echo "success";
+//echo "test";
+//header("Location: ../?success");

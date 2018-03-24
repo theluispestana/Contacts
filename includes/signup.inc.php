@@ -38,6 +38,7 @@ if (isset($_POST['submit'])) {
     	echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
    	exit;
     } else {
+        echo "test1";
         //bind parameters to the placeholder
         mysqli_stmt_bind_param($stmt, "s", $uid);
         //run parameters inside database
@@ -45,6 +46,7 @@ if (isset($_POST['submit'])) {
         $result = mysqli_stmt_get_result($stmt);
     }
     $resultCheck = $result->num_rows;
+    echo $resultCheck;
 
     //Checking if user name is usertaken
     if ($resultCheck > 0) {
@@ -52,10 +54,12 @@ if (isset($_POST['submit'])) {
         $success = false;
     }
 
-    //Checking for successful login
+    //Checking for successful signup
     if (!$success) {
+        echo "test3";
         header($header);
     } else {
+        echo "test4";
         //hashing the password
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
         //Adding info to database
@@ -67,6 +71,7 @@ if (isset($_POST['submit'])) {
             echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
     	    exit;
         } else {
+            echo "test5";
             //bind parameters to the placeholder
             mysqli_stmt_bind_param($stmt, "sssss", $first, $last, $email, $uid, $hashedPwd);
             //run parameters inside database
@@ -75,5 +80,5 @@ if (isset($_POST['submit'])) {
         }
     }
 } else {
-    header("Location: ../index.php");
+    header("Location: ../");
 }
