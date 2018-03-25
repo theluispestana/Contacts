@@ -6,7 +6,7 @@
       <div class="content-text-container">
           <h1>Contacts test</h1>
           <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum felis vitae suscipit efficitur. Duis ut metus non diam scelerisque aliquam. Aenean fermentum sem sed orci hendrerit, ut molestie magna blandit. Sed hendrerit feugiat mi, et hendrerit est. Donec vel tortor in tellus cursus posuere. Maecenas fermentum est urna, et condimentum lorem vestibulum vitae. Pellentesque eu aliquam nunc. Duis vel turpi</p>
+          <p>Welcome to Online Contacts. Create an account and save names, phone numbers, and emails!</p>
       </div>
       <div class="form-container">
           <form class="sign up" action="includes/signup.inc.php" method="post">

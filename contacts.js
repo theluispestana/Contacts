@@ -23,7 +23,7 @@ if (window.location.pathname == "/" || window.location.pathname == "/~onlineco/"
 //code will only run on contacts.php
 if (window.location.pathname == "/~onlineco/contacts.php") {
   //will close side bar by default if window is too narrow
-  if (window.innerWidth <= 700) {
+  if (window.innerWidth <= window.innerHeight) {
     content.style.width = "100%";
   }
 }
@@ -52,7 +52,7 @@ function saveClass() {
 
 //function will toggle animation to hide or show side bar options
 function toggleSideBar() {
-  if (window.innerWidth <= 700) {
+  if (window.innerWidth <= window.innerHeight) {
     if (content.style.width == "60%") {
       // sideBar.style.display = "none";
       content.style.width = "100%";
